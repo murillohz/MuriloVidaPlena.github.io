@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agende seu Atendimento Online | Clínica Vida Plena</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Função que exibe a mensagem após o envio do formulário
+        function enviarSolicitacao(event) {
+            event.preventDefault(); // Impede o envio real do formulário
+
+            // Oculta o formulário
+            document.querySelector('.form-atendimento').style.display = 'none';
+
+            // Exibe a mensagem de confirmação
+            const confirmacao = document.createElement('p');
+            confirmacao.textContent = 'Atendimento marcado, entraremos em contato em breve!';
+            confirmacao.style.fontSize = '1.5rem';
+            confirmacao.style.color = '#4CAF50';
+            confirmacao.style.textAlign = 'center';
+
+            // Adiciona a mensagem na página
+            document.querySelector('.service-detail .container').appendChild(confirmacao);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Clínica Vida Plena</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="service-detail">
+        <div class="container">
+            <h2>Agende seu Atendimento Online</h2>
+            <form class="form-atendimento" onsubmit="enviarSolicitacao(event)">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="atendimento">Atendimento Desejado:</label>
+                <select id="atendimento" name="atendimento" required>
+                    <option value="consulta-medica">Consulta Médica</option>
+                    <option value="exame-laboratorial">Exame Laboratorial</option>
+                    <option value="aconselhamento-nutricional">Aconselhamento Nutricional</option>
+                    <option value="fisioterapia">Fisioterapia</option>
+                    <option value="psicologia">Psicologia</option>
+                    <option value="check-up">Check-up</option>
+                    <option value="vacinacao">Vacinação</option>
+                </select>
+
+                <label for="whatsapp">Número do WhatsApp:</label>
+                <input type="text" id="whatsapp" name="whatsapp" required placeholder="(xx) xxxxx-xxxx">
+
+                <button type="submit" class="btn-cta">Enviar Solicitação</button>
+            </form>
+
+            <p class="info">Em breve entraremos em contato pelo WhatsApp para confirmar seu atendimento.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Clínica Vida Plena - Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

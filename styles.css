@@ -1,0 +1,373 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 0.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #fff;
+    color: #4CAF50;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-top: 80px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #FFA500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #ff8c00;
+}
+
+/* Seção Sobre */
+.about {
+    padding: 3rem 0;
+    background: #fff;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+/* Seção de Serviços */
+.services {
+    padding: 3rem 0;
+}
+
+.services ul {
+    list-style: none;
+    text-align: center;
+}
+
+.services li {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+/* Seção de Contato */
+.contact {
+    padding: 3rem 0;
+    background: #fff;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact p {
+    text-align: center;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 3px solid #4CAF50;
+}
+
+/* Ajuste de Responsividade */
+@media (max-width: 768px) {
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .about, .contact {
+        padding: 2rem 0;
+    }
+
+    .btn-cta {
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-cta {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .about, .contact {
+        padding: 1.5rem 0;
+    }
+
+    .services li {
+        padding: 0.8rem 0;
+    }
+}
+
+/* Serviço Detalhado (Páginas de serviço) */
+.service-detail {
+    background: #fff;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-detail h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #4CAF50;
+}
+
+.service-detail p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+}
+
+.service-detail .btn-cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #FFA500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.service-detail .btn-cta:hover {
+    background-color: #ff8c00;
+}
+
+/* Padronizar Imagens */
+.service-detail img {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    border-radius: 10px; 
+    margin: 1.5rem 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.call-to-action {
+    background-color: #FFA500;
+    color: white;
+    padding: 1rem 2rem; 
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.call-to-action p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.call-to-action .btn-cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    color: #FFA500;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action .btn-cta:hover {
+    background-color: #ff8c00;
+    color: white;
+}
+
+/* Formulário de atendimento online */
+.form-atendimento {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-atendimento label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.form-atendimento input, 
+.form-atendimento select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.form-atendimento button {
+    padding: 1rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-atendimento button:hover {
+    background-color: #45a049;
+}
+
+.info {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #4CAF50;
+}
